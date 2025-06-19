@@ -26,6 +26,8 @@ pd.set_option('display.max_columns', None)
 print('Read dataset completed successfully.')
 print('Total number of rows: {0}\n\n'.format(len(training_df.index)))
 print(training_df.head(200))
+print(training_df.describe(include='all'))
+'''
 training_df['TRIP_MILES'].plot(kind='hist', bins=20, title='TRIP_MILES')
 plt.gca().spines[['top', 'right',]].set_visible(False)
 plt.show()
@@ -82,3 +84,4 @@ plt.figure(figsize=figsize)
 sns.violinplot(training_df, x='TIP_RATE', y='PAYMENT_TYPE', inner='box', palette='Dark2')
 sns.despine(top=True, right=True, bottom=True, left=True)
 plt.show()
+''' 
